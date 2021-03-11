@@ -20,16 +20,14 @@
     </form>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        //collect value of input field
-        $name = $_POST['fname'];
-        if (empty($name)){
-            echo "Name is empty";
-        } else {
-            echo $name;
-        }
+        // collect value of input field
+        echo 'name = '.$_POST['fname'] . '<br/>';
+        echo 'email = '.$_POST['email'] . '<br/>';
+        echo 'website = '.$_POST['website'] . '<br/>';
+        echo 'comment = '.$_POST['comment'] . '<br/>';
+        echo 'gender = '.$_POST['gender'] . '<br/>';
     }
-
-?>
+    ?>
 
 </body>
 </html>

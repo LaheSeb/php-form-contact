@@ -6,22 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body align=center>
+<body>
     <form method="POST" action ="<?php echo $_SERVER['PHP_SELF'];?>">
-       Name:<input type="text" name="fname"><br/>
-       E-Mail:<input type="text" name="email"><br/>
-       Website:<input type="text" name="website"><br/>
-       Comment:<textarea  name="comment" rows="1" cols="20"></textarea><br/>
-       Sexe : <input type="radio" name="gender" value="female">Female
-<input type="radio" name="gender" value="male">Male
-<input type="radio" name="gender" value="other">Other
-<input type="radio" name="gender" value="other">Homme-Poisson<br/>
+       Name:<input type="text" name="fname">
        <input type="submit">
     </form>
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //collect value of input field
-        $name = $_POST['fname'];
+        $name = $_REQUEST['fname'];
         if (empty($name)){
             echo "Name is empty";
         } else {
